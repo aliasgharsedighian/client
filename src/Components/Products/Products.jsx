@@ -1,0 +1,54 @@
+import dataProducts from "./dataProducts";
+import './Products.css';
+import './flexboxgrid.css';
+
+
+const HomePageProducts = () => {
+    return ( 
+        <section className="home-page-product">
+            <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            
+                {dataProducts.map((obj,index)=>{
+                    return (
+                        
+                       <div className="shopping-cart">
+                        <div className="img-sec">
+                   <img src={obj.images} alt="" />
+                   <span className="hot-offer">{obj.hotOffer}</span>
+                   <div className="stars">
+                    {obj.stars}
+                   </div>
+                </div>
+                <div className="title-shopping-cart">
+                    {obj.title}
+                </div>
+                <div className="buttons-shopping-cart">
+                   <div className="right-shopping-cart">
+                     <span className="price">
+                        {obj.price}
+                     </span>
+                   </div>
+                   <div className="left-shopping-cart">
+                    
+                    <div className="extend-btn">
+                        <a href="#">اطلاعات بیشتر</a>
+                        
+                    </div>
+                    <div className="extend-icon">
+                        <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                    </div>
+                 </div>
+                </div>
+                       </div>
+                    )
+                })}
+            
+           </div>
+            </div>
+            </section>
+        
+     );
+}
+ 
+export default HomePageProducts;

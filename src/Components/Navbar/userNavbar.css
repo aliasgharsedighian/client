@@ -1,0 +1,41 @@
+nav.user-navbar-area{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+nav .nav-right{
+    display: flex;
+    align-items: center;
+}
+nav .nav-right a{
+    color: #444;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 1.1em;
+}
+nav .nav-right a:hover{
+    color:#2196F3;
+}
+nav .nav-left .register-login-btn{
+    border: 1px solid #666;
+    padding: 5px 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav-left .register-login-btn a{
+    color: #444;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+nav .nav-left .register-login-btn:hover {
+    background: #2196F3;
+    border:none;
+}
+nav .nav-left .register-login-btn i{
+    margin: 7px;
+    color: #444;
+    font-size: 1.1em;
+}
