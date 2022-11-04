@@ -17,6 +17,12 @@ nav .nav-right a{
 nav .nav-right a:hover{
     color:#2196F3;
 }
+.nav-left:hover .register-login-btn i{
+    color: white;
+}
+.nav-left:hover .register-login-btn a{
+    color: white;
+}
 nav .nav-left .register-login-btn{
     border: 1px solid #666;
     padding: 5px 8px;
