@@ -7,15 +7,16 @@ const HomePageProducts = () => {
     return ( 
         <section className="home-page-product">
             <div className="row">
-                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                
             
                 {dataProducts.map((obj,index)=>{
                     return (
-                        
+                        <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                        <div className="shopping-cart">
                         <div className="img-sec">
                    <img src={obj.images} alt="" />
                    <span className="hot-offer">{obj.hotOffer}</span>
+                   <span className="offer-per">{obj.offerPer}</span>
                    <div className="stars">
                     {obj.stars}
                    </div>
@@ -41,10 +42,11 @@ const HomePageProducts = () => {
                  </div>
                 </div>
                        </div>
+                       </div>
                     )
                 })}
             
-           </div>
+           
             </div>
             </section>
         

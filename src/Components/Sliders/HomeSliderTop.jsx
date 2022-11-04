@@ -23,23 +23,7 @@ export default function HomeSliderTop ()  {
         setSlide(`slide${slideIndex}` , slideIndex)
     }, 4000);
 
-    // const prevSlide =()=>{
-    //     if(slideIndex !==1){
-    //         return (slideIndex -1)
-    //     }
-    //     else if(slideIndex ===1){
-    //         return (slideIndex=dataSlider.length)
-    //     }
-    // }
-    // const nextSlide =()=>{
-    //     if(slideIndex !== dataSlider.length){
-    //         return(slideIndex +1)
-    //     }
-    //     else if (slideIndex ===dataSlider.length){
-    //        return (slideIndex =1)
-    //     }
-    // }
-
+   
    
     return ( 
         <section class="slider">
@@ -53,21 +37,22 @@ export default function HomeSliderTop ()  {
                         src={obj.images} 
                         alt="" />
                         <span>{obj.title}</span>
-                    </div>
+                    </div> 
                 )
              })}
-            {/* <BtnSlider moveSlide={nextSlide} direction={'next'} />
-            <BtnSlider moveSlide={prevSlide} direction={'prev'} /> */}
+           
         </div>
-        {/* <div className='container-dots'>
-            {Array.from({length:5}).map((item , index) =>(
-                <div
-                onClick={() => moveDot(index + 1)} 
-                className={slideIndex === index + 1 ? 'dot-active' : 'dot'}>
-
+        <div className="buttons">
+        {dataSlider.map((bobj , index)=>{
+            
+            return (
+                <div className='circle-button'>
+                    {bobj.circle}
                 </div>
-            ))}
-       </div> */}
+            )
+            
+        })}
+        </div>
        
     </section> );
 }
