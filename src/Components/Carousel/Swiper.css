@@ -1,0 +1,133 @@
+
+
+.container-hotoffer {
+  margin: 0 auto;
+}
+.my-swiper-slide{
+  margin-left: 10px!important;
+  border-radius: 10px!important;
+}
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  padding: 0 5px;
+}
+.swiper-wrapper{
+  height: auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* data */
+.shopping-cart{
+  font-size: 0.9em;
+  box-shadow: 0px 2px 8px 0px rgba(0 , 0, 0, 0.5);
+}
+.shopping-cart .img-sec{
+  position: relative;
+  display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.shopping-cart .img-sec img{
+  width: 65%;
+}
+.shopping-cart .img-sec .stars{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #f1c40f;
+  font-size: 0.7em;
+}
+.shopping-cart .img-sec .offer-per2{
+  background-color:#e74c3c ;
+  color: white;
+  border-radius: 5px;
+  padding: 1px;
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  font-size: 0.8em;
+}
+.shopping-cart .title-shopping-cart{
+  color: #333;
+  margin: 10px;
+  font-size: 0.9em;
+  height: 25px;
+  overflow: hidden;
+}
+.shopping-cart .price{
+  color:#666 ;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+/* swiper hotoffer container */
+
+.swiper-hotoffer-container{
+  height: 265px;
+  background-color: #ef3e53;
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-hotoffer-container .img2-sec{
+  width: 15%;
+  display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-hotoffer-container .product-sec{
+  width: 85%;
+}
+.swiper-hotoffer-container .img2-sec >a{
+  color: white;
+}
+
+/* media query */ 
+/* need to fix */
+@media screen and (max-width:800px){
+  .swiper-slide{
+    width: 160px!important;
+  }
+  .swiper-hotoffer-container .product-sec{
+    width: 75%;
+  }
+  .swiper-hotoffer-container .img2-sec{
+    width: 25%;
+  }
+
+} 
+
