@@ -3,10 +3,20 @@ nav.user-navbar-area{
     justify-content: space-between;
     padding: 10px 15px;
     font-size: 1em;
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 10px; */
 }
 nav .nav-right{
     display: flex;
     align-items: center;
+}
+.number-shopping-icon span{
+    font-size: 0.65em;
+    padding: 0px 2px 0px 0px;
 }
 nav .nav-right a{
     color: #444;

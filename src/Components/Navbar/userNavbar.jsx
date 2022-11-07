@@ -8,7 +8,10 @@ const UserNavbar = () => {
         <nav className="user-navbar-area">
             <div className="nav-right">
                 <a href=""><i class="far fa-user"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a className='number-shopping-icon' href="">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
                 <a href=""><i class="fa-solid fa-house"></i></a>
                 <a href=""><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
 

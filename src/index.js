@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter as Router } from 'react-router-dom';
 import './flexboxgrid.css';
+import {Provider} from 'react-redux';
+import allReducers from './Redux/Reducers';
+import {legacy_createStore as createStore} from 'redux';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+const store = createStore(allReducers , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+ReactDOM.render(
+  <Provider store={store}>
     <Router>
-    <App />
+       <App />
     </Router>
-  </React.StrictMode>
+  </Provider>
+  ,document.getElementById("root")
 );
 
 
