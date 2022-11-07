@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './userNavbar.css';
+import {useSelector , useDispatch} from 'react-redux';
 
 const UserNavbar = () => {
+    const addtocards = useSelector(state => state.addtocards);
     return ( 
         <>
         <nav className="user-navbar-area">
@@ -10,7 +12,7 @@ const UserNavbar = () => {
                 <a href=""><i class="far fa-user"></i></a>
                 <a className='number-shopping-icon' href="">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span>0</span>
+                    <span>{addtocards}</span>
                 </a>
                 <a href=""><i class="fa-solid fa-house"></i></a>
                 <a href=""><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>

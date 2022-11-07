@@ -1,11 +1,11 @@
-import addToCart from './addToCart';
+import addToCartReducer from './addToCart';
 import loggedReducer from './isLogged';
-import themeMode from './themeMode';
+import themeModeReducer from './themeMode';
 import {combineReducers} from 'redux';
 
 const allReducers = combineReducers({
-    addtocart: addToCart,
+    addtocards: addToCartReducer,
     islogged : loggedReducer,
-    themeMode: themeMode
+    themeMode: themeModeReducer
 })
 export default allReducers;

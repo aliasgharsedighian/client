@@ -1,4 +1,4 @@
-const themeMode = (state=true , action)=>{
+const themeModeReducer = (state=true , action)=>{
     switch(action.type){
         case 'LIGHT-MODE' :
             return state=true;
@@ -8,4 +8,4 @@ const themeMode = (state=true , action)=>{
             return state;
     }
 }
-export default themeMode;
+export default themeModeReducer;

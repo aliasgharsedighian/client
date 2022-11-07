@@ -1,4 +1,4 @@
-const addToCart = (state=0 , action)=>{
+const addToCartReducer = (state=0 , action)=>{
     switch(action.type){
         case 'INCREMENT' :
             return state + action.payload;
@@ -6,4 +6,4 @@ const addToCart = (state=0 , action)=>{
             return state;
     }
 }
-export default addToCart;
+export default addToCartReducer;

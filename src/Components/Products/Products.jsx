@@ -1,9 +1,12 @@
+import { useDispatch} from 'react-redux';
+import { addToCart } from '../../Redux/Actions';
 import dataProducts from "./dataProducts";
 import './Products.css';
 import './flexboxgrid.css';
 
 
 const HomePageProducts = () => {
+    const dispatch = useDispatch();
     return ( 
         <section className="home-page-product">
             <div className="row">
@@ -37,7 +40,7 @@ const HomePageProducts = () => {
                         
                     </div>
                     <div className="extend-icon">
-                        <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                        <button onClick={()=> dispatch(addToCart(1))}><i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                  </div>
                 </div>

@@ -15,9 +15,7 @@ function App() {
     </div>
   );
 
-  function handleIncrementShopping(){
-    //function add here
-  }
+  
 }
 
 export default App;
