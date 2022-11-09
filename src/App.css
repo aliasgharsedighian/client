@@ -17,3 +17,11 @@ body {
 a{
   text-decoration: none;
 }
+
+
+#light {
+  background-color: white;
+}
+#dark {
+  background-color: #292929
+}

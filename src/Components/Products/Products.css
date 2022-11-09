@@ -13,13 +13,14 @@
  .home-page-product .shopping-cart:hover{
      margin: 15px 0;
  }
- .shopping-cart .img-sec{
+ .shopping-cart .img-sec2{
      position: relative;
  }
- .shopping-cart .img-sec img{
+ .shopping-cart .img-sec2 img{
     width: 65%;
+    height: 155px;
  }
- .shopping-cart .img-sec .hot-offer{
+ .shopping-cart .img-sec2 .hot-offer{
     background-color:#e74c3c ;
     color: white;
     border-radius: 5px;
@@ -28,7 +29,7 @@
     top: 10px;
     font-size: 0.8em;
  }
- .shopping-cart .img-sec .stars{
+ .shopping-cart .img-sec2 .stars{
     position: absolute;
     left: 10px;
     top: 10px;
@@ -85,7 +86,7 @@
      color: #000;
  }
 
- .shopping-cart .img-sec .offer-per{
+ .shopping-cart .img-sec2 .offer-per{
     background-color:#e74c3c ;
     color: white;
     border-radius: 5px;
@@ -93,4 +94,38 @@
     left: 20px;
     bottom: -10px;
     font-size: 0.8em;
+ }
+
+ /* style for paginate */
+
+ .paginationBttns {
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+    background: #1a1a1a;
+    border-radius: 10px;
+ }
+
+ .paginationBttns a{
+    padding: 6px 15px;
+    margin: 8px;
+    border-radius: 5px;
+    color: #8bc34a;
+    cursor: pointer;
+    color: white;
+    background: #202020;
+ }
+ .paginationBttns a:hover {
+    color: white;
+    background: #5a5a5a
+ }
+ .paginationActive a{
+    color: white;
+    background: #5a5a5a
  }

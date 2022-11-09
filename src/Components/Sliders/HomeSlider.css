@@ -54,11 +54,11 @@
     left: 20px;
     transform: translateY(-60%);
   }
-  .next {
+  /* .next {
     top: 50%;
     left:88%;
     transform: translateY(-60%);
-  }
+  } */
   .dot {
     margin: 0px 2px 0px 4px;
     background: #fff;

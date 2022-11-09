@@ -15,8 +15,11 @@ nav .nav-right{
     align-items: center;
 }
 .number-shopping-icon span{
+    background: #e74c3c;
     font-size: 0.65em;
-    padding: 0px 2px 0px 0px;
+    padding: 1px 2px 0px 2px;
+    color: white;
+    border-radius: 40%;
 }
 nav .nav-right a{
     color: #444;
@@ -54,4 +57,39 @@ nav .nav-left .register-login-btn i{
     margin: 7px;
     color: #444;
     font-size: 1.1em;
+}
+.nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* theme change style */
+
+  #dark {
+    background-color: #292929
+  }
+  #dark nav .nav-right a{
+    color: white;
+  }
+  #dark nav .nav-left .register-login-btn i{
+    color: white;
+  }
+  #dark nav .nav-left .register-login-btn a{
+    color: white;
+  }
+  #dark .home-page-product .shopping-cart{
+    background-color: #ffffff;
+  }
+ #dark nav .nav-right a:hover {
+    color: #2196F3!important;
+}
+#dark .navbar-home-page ul li ul li a{
+    color: white;
+}
+#dark .navbar-home-page ul li:hover li{
+    background-color: #292929;
+}
+#dark .navbar-home-page ul li ul{
+    background-color: #292929;
 }
