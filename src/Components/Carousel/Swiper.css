@@ -47,9 +47,10 @@
 
 
 /* data */
-.shopping-cart{
+.my-swiper-slide .shopping-cart{
   font-size: 0.9em;
   box-shadow: 0px 2px 8px 0px rgba(0 , 0, 0, 0.5);
+  height: 220px;
 }
 .shopping-cart .img-sec{
   position: relative;

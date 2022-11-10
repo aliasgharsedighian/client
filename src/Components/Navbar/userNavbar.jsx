@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./userNavbar.css";
 import { useSelector} from "react-redux";
 import ReactSwitch from "react-switch";
