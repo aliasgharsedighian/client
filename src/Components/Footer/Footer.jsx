@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="bottom">
-            کلیه حقوق محفوظ می باشد 2020 ©
+            کلیه حقوق محفوظ می باشد 2022 ©
         </div>
     </footer>
      );

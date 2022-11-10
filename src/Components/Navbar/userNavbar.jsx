@@ -29,8 +29,51 @@ const UserNavbar = () => {
               <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
             </a>
             <div className="switch">
-              {/* <label> {ThemeContexts.theme === "light" ? "Light" : "Dark"} </label> */}
-              <ReactSwitch onChange={ThemeContexts.toggleTheme} checked={ThemeContexts.theme === "dark"} />
+              <label>  
+              <ReactSwitch 
+              onChange={ThemeContexts.toggleTheme} 
+              checked={ThemeContexts.theme === "dark"}
+              onColor="#86d3ff"
+              onHandleColor="#2693e6"
+              handleDiameter={30}
+              uncheckedIcon={false}
+              checkedIcon={false}
+              boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+              activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+              height={20}
+              width={48}
+              uncheckedHandleIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color:'#ffcc00',
+                    fontSize: 15
+                  }}
+                >
+                  <i class="fa fa-sun" aria-hidden='true'></i>
+                </div>
+              }
+              checkedHandleIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color: "white",
+                    fontSize: 15
+                  }}
+                >
+                  <i class="fa fa-moon" aria-hidden='true'></i>
+                </div>
+              }
+              className="react-switch"
+              id="material-switch"
+              />
+              </label>
             </div>
           </div>
           <div className="nav-left">
@@ -46,3 +89,4 @@ const UserNavbar = () => {
 
 
 export default UserNavbar;
+// {ThemeContexts.theme === "light" ? "Light" : "Dark"}
