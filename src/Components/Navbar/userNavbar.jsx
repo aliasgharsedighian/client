@@ -4,6 +4,7 @@ import { useSelector} from "react-redux";
 import ReactSwitch from "react-switch";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 const UserNavbar = () => {
   const addtocards = useSelector((state) => state.addtocards);
@@ -21,9 +22,9 @@ const UserNavbar = () => {
               <i class="fa-solid fa-cart-shopping"></i>
               <span>{addtocards}</span>
             </a>
-            <a href="">
+            <Link to="/">
               <i class="fa-solid fa-house"></i>
-            </a>
+            </Link>
             <a href="">
               <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
             </a>
@@ -35,7 +36,7 @@ const UserNavbar = () => {
           <div className="nav-left">
             <div className="register-login-btn">
               <i class="fas fa-user"></i>
-              <a href="#">ثبت نام / ورود</a>
+              <Link to="/Create-account">ثبت نام / ورود</Link>
             </div>
           </div>
         </nav>
