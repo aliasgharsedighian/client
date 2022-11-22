@@ -63,6 +63,9 @@ nav .nav-left .register-login-btn i{
     justify-content: center;
     align-items: center;
 }
+.nav-left .switch {
+    margin-left: 20px;
+}
 
 /* theme change style */
 

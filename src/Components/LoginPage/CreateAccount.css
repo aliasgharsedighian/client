@@ -63,6 +63,11 @@
   }
   .signup-button{
     margin: 20px 0px;
+    display: flex;
+    align-items: center;
+  }
+  .signup-button p{
+    margin: 0 20px;
   }
   .signin-instead{
     text-decoration: none;
@@ -161,6 +166,9 @@
     font-size: 0.7em;
     color: #333;
 }
+.login-status{
+  text-align: center;
+}
 
 #dark .signup-instead a{
     color: #03dac6;
@@ -182,4 +190,16 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
     background-color: #1e1e1e;
+}
+#dark .input-login{
+  color: white;
+}
+#dark .login-status{
+  color: white;
+}
+#dark .input{
+  color: white;
+}
+#dark .signup-button p{
+  color: white;
 }

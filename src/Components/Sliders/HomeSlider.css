@@ -1,4 +1,4 @@
-.slider{
+/* .slider{
     position: relative;
     font-size: 1em;
     margin: 10px;
@@ -45,21 +45,21 @@
 
 .slider .buttons i:hover{
     color: rgba(255, 255, 255, 0.4);
-}
+} */
 
 /* btn slider and dots */
 
-.prev{
+/* .prev{
     top: 50%;
     left: 20px;
     transform: translateY(-60%);
-  }
+  } */
   /* .next {
     top: 50%;
     left:88%;
     transform: translateY(-60%);
   } */
-  .dot {
+  /* .dot {
     margin: 0px 2px 0px 4px;
     background: #fff;
     padding: 5px;
@@ -99,18 +99,7 @@
     cursor: pointer;
   }
 
-  /* extra */
-  .container-slider {
-    max-width: 1000px;
-    height: 500px;
-    margin: 20px 13%;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0 , 0 ,0 ,0.2);
-  }
-  .container-slider h3{
-    position: absolute;
-  }
+ 
   @media screen and (max-width:700px){
     .container-slider{
         margin: 100px 10px 0;
@@ -130,11 +119,11 @@
   }
   .active-anim{
     opacity: 1;
-  }
+  } */
 
   /* animate css */
 
-@-webkit-keyframes fadeIn {
+/* @-webkit-keyframes fadeIn {
   from{
       opacity: 0;
   }
@@ -153,4 +142,4 @@
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-}
+} */

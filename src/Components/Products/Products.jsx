@@ -5,9 +5,11 @@ import './Products.css';
 import './flexboxgrid.css';
 import ReactPaginate from 'react-paginate';
 import { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 
 const HomePageProducts = () => {
+    const [searchTerm ,setSearchTerm]= useState('');
+    
     const dispatch = useDispatch();
     const [pageNumber, setPageNumber] = useState(0);
 
@@ -16,12 +18,19 @@ const HomePageProducts = () => {
 
     const displayProduct = dataProducts
     .slice(pagesVisited, pagesVisited + productPerPage)
+    .filter((val)=>{
+        if(searchTerm == ''){
+            return val
+        }else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            return val
+        }
+    })
     .map(obj =>{
         return (
-            <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <article key={obj.id} className="col-lg-3 col-md-3 col-sm-4 col-xs-12">
            <div className="shopping-cart">
             <div className="img-sec2">
-       <img src={obj.images} alt="" />
+            <Link to={`/products/${obj.id}`}><img src={obj.images} alt="" /></Link>
        <span className="hot-offer">{obj.hotOffer}</span>
        <span className="offer-per">{obj.offerPer}</span>
        <div className="stars">
@@ -40,7 +49,7 @@ const HomePageProducts = () => {
        <div className="left-shopping-cart">
         
         <div className="extend-btn">
-            <a href="#">اطلاعات بیشتر</a>
+            <Link to={`/products/${obj.id}`}>اطلاعات بیشتر</Link>
             
         </div>
         <div className="extend-icon">
@@ -49,7 +58,7 @@ const HomePageProducts = () => {
      </div>
     </div>
            </div>
-           </div>
+           </article>
         )
     });
 
@@ -61,6 +70,11 @@ const HomePageProducts = () => {
 
     return ( 
         <section className="home-page-product">
+            <form className='product-search'  role='search'>
+                <label className='search-label' htmlFor="search">جستجو محصولات</label>
+                <input className='search-input' id='search' type='search' placeholder='جستجو ...' onChange={event =>{setSearchTerm(event.target.value)}} autoFocus required />
+            </form>
+
             <div className="row">
                 {displayProduct}
             </div>

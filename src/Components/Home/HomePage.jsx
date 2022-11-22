@@ -4,6 +4,7 @@ import HomeSliderTop from "../Sliders/HomeSliderTop";
 import '../../flexboxgrid.css';
 import DivSwiper from "../Carousel/divSwiper";
 import Footer from "../Footer/Footer";
+import HomeSlider from "../Sliders/HomeSlider";
 
 
 
@@ -11,9 +12,8 @@ const HomePage = () => {
     return ( 
         <>
         <NavbarHomePage />
-        <HomeSliderTop />
+        <HomeSlider />
         <HomePageProducts />
-        {/* <ProductPagination /> */}
         <DivSwiper />
         <Footer />
         </>
