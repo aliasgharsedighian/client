@@ -1,131 +1,189 @@
 import React, { useState } from "react";
-import imgArea from "./svg/account.svg";
 import { Link } from "react-router-dom";
 import "./CreateAccount.css";
-import Footer from "../Footer/Footer";
 import Axios from "axios";
+import { CreateAccountSchema } from "../../Validation/CreateAccountValidation";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import alertValidation from "../../Validation/red-alert-icon.svg";
 
 const CreateAccount = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [userName, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [repPassword, setRepPassword] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [userName, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [repPassword, setRepPassword] = useState("");
   const [regStatus, setRegStatus] = useState("");
 
-  // function signUp() {
-  //   let item = { firstName, lastName, userName, password, repPassword };
-  //   console.warn(item);
-  // }
-
-  const [userCreated, setUserCreated] = useState("");
-
-  const adduser = () => {
-    Axios.post("http://localhost:3001/create-account", {
-      firstName: firstName,
-      lastName: lastName,
-      userName: userName,
-      password: password,
-      repPassword: repPassword,
-    }).then(() => {
+  const adduser = async (data) => {
+    // const item = {firstName, lastName, userName, password, repPassword}
+    // console.log(item)
+    console.log(data)
+    // const formData = {
+    //   firstName: firstName,
+    //   lastName: lastName,
+    //   userName: userName,
+    //   password: password,
+    //   repPassword: repPassword,
+    // };
+    Axios.post("http://localhost:3001/create-account", data).then(() => {
       console.log("success");
       setRegStatus("ثبت نام شما با موفقیت انجام شد");
     });
+
+    const isValid = await CreateAccountSchema.isValid(data);
+    console.log(isValid);
   };
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(CreateAccountSchema),
+  });
+
   return (
-    <div>
-      <div className="CreateAccount-box">
+
+      <form onSubmit={handleSubmit(adduser)} className="CreateAccount-box">
         <div className="UsernamePass">
-          <div className="col-lg-8">
-            <div style={{ marginBottom: "30px" }}>
+          <div className="register-area1">
+            <div className="register-page-title">
               <h3>ثبت نام</h3>
             </div>
-            <div style={{ display: "flex", marginBottom: "30px" }}>
+            <div className="firstname-lastname-container">
               <div className="input-group">
                 <input
-                  onChange={(e) => setFirstName(e.target.value)}
+                  // onChange={(e) => setFirstName(e.target.value)}
                   type="text"
                   id="firstName"
                   required
                   className="input"
+                  name="firstName"
+                  {...register("firstName")}
                 />
                 <label htmlFor="name" className="input-label">
                   نام
                 </label>
               </div>
-              <div style={{ marginLeft: "auto" }} className="input-group">
+              <div className="input-group">
                 <input
-                  onChange={(e) => setLastName(e.target.value)}
+                  // onChange={(e) => setLastName(e.target.value)}
                   type="text"
                   id="lastName"
                   required
                   className="input"
+                  name="lastName"
+                  {...register("lastName")}
                 />
                 <label htmlFor="name" className="input-label">
                   نام خانوادگی
                 </label>
               </div>
             </div>
+            {errors.firstName ? (
+              <div className="validation-register">
+                <img src={alertValidation} alt="" />
+                <span>{errors.firstName.message}</span>
+              </div>
+            ) : (
+              <></>
+            )}
+            {errors.lastName ? (
+              <div className="validation-register">
+                <img src={alertValidation} alt="" />
+                <span>{errors.lastName.message}</span>
+              </div>
+            ) : (
+              <></>
+            )}
 
-            <div className="input-group">
-              <input
-                onChange={(e) => setUsername(e.target.value)}
-                type="text"
-                id="userName"
-                required
-                className="input"
-                placeholder="email.com@"
-              />
-              <label htmlFor="name" className="input-label">
-                نام کاربری
-              </label>
-            </div>
-            <span style={{ fontSize: "12px" }}>
-              می‌توانید از حروف و اعداد استفاده کنید.
-            </span>
-
-            <div style={{ display: "flex", marginTop: "60px" }}>
+            <div className="username-container">
               <div className="input-group">
                 <input
-                  onChange={(e) => setPassword(e.target.value)}
+                  // onChange={(e) => setUsername(e.target.value)}
+                  type="text"
+                  id="userName"
+                  required
+                  className="input"
+                  placeholder="email.com@"
+                  name="userName"
+                  {...register("userName")}
+                />
+                <label htmlFor="name" className="input-label">
+                  نام کاربری
+                </label>
+              </div>
+              <span>
+              می‌توانید از حروف و اعداد استفاده کنید.
+            </span>
+            {errors.userName ? (
+              <div className="validation-register">
+                <img src={alertValidation} alt="" />
+                <span>{errors.userName.message}</span>
+              </div>
+            ) : (
+              <></>
+            )}
+            </div>
+
+            <div className="password-container">
+              <div className="input-group">
+                <input
+                  // onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   id="password"
                   className="input"
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                  required
+                  name="password"
+                  {...register("password")}
                 />
                 <label htmlFor="name" className="input-label">
                   رمز عبور
                 </label>
               </div>
-              <div style={{ marginLeft: "auto" }} className="input-group">
+              <div className="input-group">
                 <input
-                  onChange={(e) => setRepPassword(e.target.value)}
+                  // onChange={(e) => setRepPassword(e.target.value)}
                   type="password"
                   id="repPassword"
-                  required
                   className="input"
+                  name="repPassword"
+                  {...register("repPassword")}
                 />
                 <label htmlFor="name" className="input-label">
                   تکرار رمز عبور
                 </label>
               </div>
+
+              
             </div>
-            <span style={{ fontSize: "12px" }}>
+            <span style={{ fontSize: "0.7em" , marginTop: "5px" }}>
               کلمه عبور باید حداقل ۸ کاراکتر باشد.از حروف٬اعدادو نماد ها استفاده
               کنید.
             </span>
+            {errors.password ? (
+              <div className="validation-register">
+                <img src={alertValidation} alt="" />
+                <span>{errors.password.message}</span>
+              </div>
+            ) : (
+              <></>
+            )}
+            {errors.repPassword ? (
+              <div className="validation-register">
+                <img src={alertValidation} alt="" />
+                <span>رمز عبور باید یکسان باشد</span>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
-          <div className="col-lg-4 imgArea">
-            <img src={imgArea} alt="" />
-          </div>
+        
         </div>
 
         <div className="signup-area">
           <div className="signup-button">
-            <button onClick={adduser} className="signup">
+            <button onClick={handleSubmit(adduser)} className="signup">
               ثبت نام
             </button>
             <p>{regStatus}</p>
@@ -136,9 +194,8 @@ const CreateAccount = () => {
             </Link>
           </div>
         </div>
-      </div>
-      <Footer />
-    </div>
+      </form>
+
   );
 };
 

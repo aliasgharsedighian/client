@@ -26,14 +26,14 @@ const HomeSlider = () => {
         setSlideIndex(index)
      }
 
-     setInterval(() => {
-        if (slideIndex !== dataSlider.length){
-            setSlideIndex(slideIndex + 1)
-         }
-         else if (slideIndex === dataSlider.length){
-            setSlideIndex(1)
-         }
-     }, 4000);
+    //  setInterval(() => {
+    //     if (slideIndex !== dataSlider.length){
+    //         setSlideIndex(slideIndex + 1)
+    //      }
+    //      else if (slideIndex === dataSlider.length){
+    //         setSlideIndex(1)
+    //      }
+    //  }, 4000);
 
 
     return ( 

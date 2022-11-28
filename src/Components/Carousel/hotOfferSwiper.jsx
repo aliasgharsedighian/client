@@ -1,4 +1,4 @@
-import { Pagination, Navigation, EffectFade, FreeMode } from "swiper";
+import { Pagination, Navigation, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -9,6 +9,7 @@ import "swiper/css/effect-fade";
 
 import "./Swiper.css";
 import dataHotOffer from './dataHotOffer';
+import { Link } from "react-router-dom";
 
 const HotOfferSwiper = () => {
   return (
@@ -24,7 +25,7 @@ const HotOfferSwiper = () => {
         {dataHotOffer.map((obj,index)=>{
             return (
                 <SwiperSlide className="my-swiper-slide">
-                    <a href="#">
+                    <Link to='/'>
                     <div className="shopping-cart">
                         <div className="img-sec">
                    <img src={obj.images} alt="" />
@@ -40,7 +41,7 @@ const HotOfferSwiper = () => {
                         {obj.price}
                      </span>
                        </div>
-                    </a>
+                    </Link>
                 </SwiperSlide>
             )
         })}

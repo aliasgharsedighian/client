@@ -19,7 +19,7 @@ const HomePageProducts = () => {
     const displayProduct = dataProducts
     .slice(pagesVisited, pagesVisited + productPerPage)
     .filter((val)=>{
-        if(searchTerm == ''){
+        if(searchTerm === ''){
             return val
         }else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
             return val

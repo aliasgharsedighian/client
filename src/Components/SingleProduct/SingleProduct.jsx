@@ -1,7 +1,6 @@
 import {Link, useParams} from 'react-router-dom';
 import dataProducts from '../Products/dataProducts';
 import './SingleProduct.css'
-import Footer from '../Footer/Footer'
 
 const SingleProduct = (props) => {
     
@@ -11,7 +10,6 @@ const SingleProduct = (props) => {
     
     console.log(product)
     return ( 
-        <div>
             <div className='single-product-container'>
             <div className="img-Sproduct">
                 <img src={images} alt='' />
@@ -36,8 +34,7 @@ const SingleProduct = (props) => {
             </div>
             <Link className='back-to-products' to='/products'>برگشت به صفحه محصولات</Link>
         </div>
-        <Footer />
-        </div>
+        
     )
 }
 export default SingleProduct;

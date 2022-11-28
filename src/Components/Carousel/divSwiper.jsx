@@ -7,7 +7,7 @@ const DivSwiper = () => {
         <div className="swiper-hotoffer-container">
             <div className='img2-sec'>
                 <img src={imageHotOffer} alt="" />
-                <a href="#">مشاهده همه</a>
+                <a href="/">مشاهده همه</a>
             </div>
             <div className='product-sec'>
                 <HotOfferSwiper />

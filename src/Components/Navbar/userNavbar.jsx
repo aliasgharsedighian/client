@@ -15,17 +15,17 @@ const UserNavbar = () => {
     <>
         <nav className="user-navbar-area">
           <div className="nav-right">
-            <a href="">
+            <Link to="/login-page">
               <i class="far fa-user"></i>
-            </a>
-            <a className="number-shopping-icon" href="">
+            </Link>
+            <a className="number-shopping-icon" href="/">
               <i class="fa-solid fa-cart-shopping"></i>
               <span>{addtocards}</span>
             </a>
             <Link to="/">
               <i class="fa-solid fa-house"></i>
             </Link>
-            <a href="">
+            <a href="/">
               <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
             </a>
             <div className="switch">

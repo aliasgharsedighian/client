@@ -2,15 +2,14 @@
 
 .input-group{
     position: relative;
-    display: flex;
-    flex-direction: column;
     padding: 0px 0px 0px 20px;
   }
   .input{
+    width: 100%;
     padding: 10px;
     border: 1px solid black;
     border-radius: 4px;
-    font: inherit;
+    font-size: 1em;
     color: #000;
     background-color: transparent;
     outline: 2px solid #fff;
@@ -32,23 +31,42 @@
   .input:is(:focus, :valid){
     outline-color: #d1c5fc;
   }
+  .firstname-lastname-container {
+    display: flex;
+  }
+  .username-container {
+    margin-top: 15px;
+  }
   .imgArea img {
     position: absolute;
     width: 20%;
   }
   .CreateAccount-box{
-    width: 750px;
-    height: 500px;
+    width: 500px;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    box-sizing:initial;
-    margin: 20px;
     padding: 20px;
     margin: auto;
   }
+  .register-page-title{
+    margin-bottom: 30px;
+  }
+  .register-area1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .username-container span{
+    font-size: 0.7em;
+  }
+  .password-container {
+    display: flex;
+    margin-top: 30px;
+  }
   .UsernamePass{
     display: flex;
+    justify-content: center;
   }
   .signup{
     background: #186ad7;
@@ -59,12 +77,20 @@
     cursor: pointer;
   }
   .signup-area{
-    margin-top: 50px;
+    margin-top: 25px;
   }
   .signup-button{
     margin: 20px 0px;
     display: flex;
     align-items: center;
+  }
+  .validation-register img{
+    width: 3%;
+    margin-left: 5px;
+  }
+  .validation-register span{
+    font-size: 0.7em;
+    color: red;
   }
   .signup-button p{
     margin: 0 20px;
