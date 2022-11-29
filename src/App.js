@@ -1,7 +1,7 @@
 import "./App.css";
 import "./flexboxgrid.css";
 import UserNavbar from "./Components/Navbar/userNavbar";
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./Components/Home/HomePage";
 import { useState } from "react";
 import { ThemeContext } from "./Context/Context";
