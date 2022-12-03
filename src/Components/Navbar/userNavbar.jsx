@@ -7,7 +7,7 @@ import { ThemeContext } from "../../Context/Context";
 import { Link } from "react-router-dom";
 
 const UserNavbar = () => {
-  const addtocards = useSelector((state) => state.addtocards);
+  const addtocards = useSelector((state) => state.addtocards.value);
 
   const ThemeContexts = useContext(ThemeContext);
 
@@ -20,7 +20,7 @@ const UserNavbar = () => {
           </Link>
           <a className="number-shopping-icon" href="/">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span>{addtocards}</span>
+            <span>{addtocards.amount}</span>
           </a>
           <Link to="/">
             <i class="fa-solid fa-house"></i>
@@ -88,4 +88,3 @@ const UserNavbar = () => {
 };
 
 export default UserNavbar;
-// {ThemeContexts.theme === "light" ? "Light" : "Dark"}

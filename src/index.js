@@ -4,13 +4,14 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./flexboxgrid.css";
 import { Provider } from "react-redux";
-import allReducers from "./Redux/Reducers";
-import { legacy_createStore as createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import addToCardReducer from "./Redux/addToCard";
 
-const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = configureStore({
+  reducer: {
+    addtocards: addToCardReducer,
+  },
+});
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);

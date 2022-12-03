@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../Redux/Actions";
+import { addToCard } from "../../Redux/addToCard";
 import dataProducts from "./dataProducts";
 import "../../Styles/Products.scss";
 import "./flexboxgrid.css";
@@ -47,7 +47,7 @@ const HomePageProducts = () => {
                   <Link to={`/products/${obj.id}`}>اطلاعات بیشتر</Link>
                 </div>
                 <div className="extend-icon">
-                  <button onClick={() => dispatch(addToCart(1))}>
+                  <button onClick={() => dispatch(addToCard())}>
                     <i class="fa-solid fa-cart-plus"></i>
                   </button>
                 </div>

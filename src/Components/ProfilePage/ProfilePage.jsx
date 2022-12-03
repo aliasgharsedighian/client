@@ -1,6 +1,4 @@
-import { useState } from "react";
 import "./ProfilePage.css";
-import Axios from "axios";
 import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
