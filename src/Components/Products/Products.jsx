@@ -1,5 +1,3 @@
-import { useDispatch } from "react-redux";
-import { addToCard } from "../../Redux/addToCard";
 import dataProducts from "./dataProducts";
 import "../../Styles/Products.scss";
 import "./flexboxgrid.css";
@@ -10,7 +8,6 @@ import { Link } from "react-router-dom";
 const HomePageProducts = ({ handleAddToCart }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const dispatch = useDispatch();
   const [pageNumber, setPageNumber] = useState(0);
 
   const productPerPage = 12;

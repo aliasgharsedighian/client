@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Styles/Navbar.scss";
-import { useSelector } from "react-redux";
 import ReactSwitch from "react-switch";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/Context";
@@ -8,8 +7,6 @@ import { Link } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 
 const UserNavbar = ({ setCartOpen, getTotalItem, cartItems }) => {
-  const addtocards = useSelector((state) => state.addtocards.value);
-
   const ThemeContexts = useContext(ThemeContext);
 
   return (
@@ -19,14 +16,17 @@ const UserNavbar = ({ setCartOpen, getTotalItem, cartItems }) => {
           <Link to="/login-page">
             <i class="far fa-user"></i>
           </Link>
-          <a className="number-shopping-icon" href="#">
-            <i
-              class="fa-solid fa-cart-shopping"
-              onClick={() => setCartOpen(true)}
-            ></i>
-            <span>
-              <Badge badgeContent={getTotalItem(cartItems)}></Badge>
-            </span>
+          <a
+            className="number-shopping-icon"
+            href="#"
+            onClick={() => setCartOpen(true)}
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            {cartItems < 1 ? null : (
+              <span>
+                <Badge badgeContent={getTotalItem(cartItems)}></Badge>
+              </span>
+            )}
           </a>
           <Link to="/">
             <i class="fa-solid fa-house"></i>
