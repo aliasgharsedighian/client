@@ -7,7 +7,7 @@ import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const HomePageProducts = () => {
+const HomePageProducts = ({ handleAddToCart }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const HomePageProducts = () => {
                   <Link to={`/products/${obj.id}`}>اطلاعات بیشتر</Link>
                 </div>
                 <div className="extend-icon">
-                  <button onClick={() => dispatch(addToCard())}>
+                  <button onClick={() => handleAddToCart(obj)}>
                     <i class="fa-solid fa-cart-plus"></i>
                   </button>
                 </div>

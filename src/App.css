@@ -26,3 +26,7 @@ a{
 #dark {
   background-color: #292929
 }
+.MuiPaper-root {
+  width: 38%;
+  background-color: rgb(232, 232, 232) !important;
+}

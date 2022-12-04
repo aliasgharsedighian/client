@@ -1,0 +1,34 @@
+.cart-area{
+    background-color: rgb(232, 232, 232);
+}
+.cart-area h2{
+    text-align: center;
+}
+.Cart-item-area{
+    padding: 0 20px;
+}
+.cart-item-info{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-item-info img{
+    width: 50%;
+}
+.information{
+    display: flex;
+    justify-content: space-between;
+    max-height: 30px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons button{
+    margin: 0 20px;
+    padding: 3px 12px 3px 12px;
+    background: #186ad7;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}

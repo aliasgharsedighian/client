@@ -6,6 +6,8 @@ nav.user-navbar-area{
     justify-content: space-between;
     padding: 10px 15px;
     font-size: 1em;
+    background-color: $whiteColor;
+    width: 100%;
 }
 nav .nav-right{
     display: flex;
@@ -13,10 +15,11 @@ nav .nav-right{
 }
 .number-shopping-icon span{
     background: #e74c3c;
-    font-size: 0.65em;
+    font-size: 11px;
     padding: 1px 2px 0px 2px;
     color: $whiteColor;
     border-radius: 40%;
+    margin-top: 1px;
 }
 nav .nav-right{
     a {
@@ -70,36 +73,36 @@ nav .nav-left .register-login-btn:hover {
  
 /* theme change style */
 
-  #dark {
-    background-color: #292929
-  }
-  #dark nav .nav-right a{
-    color: $whiteColor;
-  }
-  #dark nav .nav-left .register-login-btn{
-    i{color: $whiteColor;}
-    a{color: $whiteColor;}
-  }
-  #dark .home-page-product .shopping-cart{
-    background-color: $whiteColor;
-  }
- #dark nav .nav-right a:hover {
-    color: $BlueColor!important;
-}
-#dark .navbar-home-page ul li ul li a{
-    color: $whiteColor;
-}
-#dark .navbar-home-page ul li:hover li{
-    background-color: #292929;
-}
-#dark .navbar-home-page ul li ul{
-    background-color: #292929;
-}
+//   #dark {
+//     background-color: #292929
+//   }
+//   #dark nav .nav-right a{
+//     color: $whiteColor;
+//   }
+//   #dark nav .nav-left .register-login-btn{
+//     i{color: $whiteColor;}
+//     a{color: $whiteColor;}
+//   }
+//   #dark .home-page-product .shopping-cart{
+//     background-color: $whiteColor;
+//   }
+//  #dark nav .nav-right a:hover {
+//     color: $BlueColor!important;
+// }
+// #dark .navbar-home-page ul li ul li a{
+//     color: $whiteColor;
+// }
+// #dark .navbar-home-page ul li:hover li{
+//     background-color: #292929;
+// }
+// #dark .navbar-home-page ul li ul{
+//     background-color: #292929;
+// }
 
 
 //Home Navbar
 .navbar-home-page{
-    margin:0px 10px;
+    margin:5px 10px;
     display: flex;
     align-items: flex-start;
     background: $BlueColor;
@@ -146,6 +149,8 @@ nav .nav-left .register-login-btn:hover {
         background: #1770b7;
     }
 }
+
+
 
 
 
